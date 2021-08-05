@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --watch --verbose",
     "test:coverage": "jest --coverage",
-    "test:ci": "jest --runInBand"
+    "test:ci": "jest --runInBand",
+    "start": "http-server src"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "testEnvironment": "jsdom"
   },
   "dependencies": {
+    "http-server": "^0.12.3",
     "jquery": "^3.6.0"
   }
 }
