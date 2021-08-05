@@ -8,6 +8,7 @@ btn.addEventListener('click', (event) => {
   xhr.send()
 
   xhr.onreadystatechange = () => {
+    console.log(xhr.readyState)
     if (xhr.readyState < 4) {
       return; // not ready yet
     }
@@ -17,5 +18,6 @@ btn.addEventListener('click', (event) => {
     }
     responseElement.textContent =xhr.responseText;
   }
+  //console.log('haciendo peticion')
 })
 

@@ -2,6 +2,7 @@ const form = document.querySelector('form')
 
 const serializeJSON = (form) => {
   const formData = new FormData(form);
+  console.log(formData)
   const pairs = {};
   for (const [name, value] of formData) {
     pairs[name] = value;
@@ -10,6 +11,7 @@ const serializeJSON = (form) => {
 }
 
 form.addEventListener('submit', (event) => {
+  serializeJSON(form)
   event.preventDefault();
   const xhr = new XMLHttpRequest();
   xhr.open('POST', 'form', true);
